@@ -1,0 +1,74 @@
+.button {
+    width: 100px;
+    height: 55px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:before,
+  .button:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+  }
+  
+  .button:before {
+    bottom: 100%;
+    border-bottom: 30px solid;
+  }
+  
+  .button:after {
+    top: 100%;
+    width: 0;
+    border-top: 30px solid;
+  }
+  
+  .red {
+    background-color: red;
+    color: white;
+  }
+  
+  .orange {
+    background-color: orange;
+    color: white;
+  }
+  
+  .blue {
+    background-color: blue;
+    color: white;
+  }
+  
+  .green {
+    background-color: green;
+    color: white;
+  }
+  
+  .purple {
+    background-color: purple;
+    color: white;
+  }
+  
+  .black {
+    background-color: black;
+    color: white;
+  }
+  
+  .grey {
+    background-color: grey;
+    color: white;
+  }
+  
+  .default {
+    background-color: gray;
+    color: white;
+  }
+  
