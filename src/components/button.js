@@ -1,51 +1,28 @@
-import './button.css'
-import React from 'react';
+import React from "react";
+import "./button.css";
 
-const Button = ({ onClick, text, link, disabled, level }) => {
-  const handleClick = () => {
-    if (link) {
-      window.open(link, '_blank');
-    } else if (onClick) {
-      onClick();
-    }
-  };
-
+const Button = ({ onClick, text, link, disabled, className }) => {
+  // const handleClick = () => {
+  //   if (link) {
+  //     window.open(link, "_blank");
+  //   } else if (onClick) {
+  //     onClick();
+  //   }
+  // };
+  // const levelClass = `button button-${className}`;
   return (
-    <button onClick={handleClick} disabled={disabled} level={getLevel}>
-      {text}
+    <button>
+      <div class="frame">
+        <div class="hex-outer h1"></div>
+        <div class="hex-outer h2"></div>
+        <div class="hex-outer h3"></div>
+        <div class="hex-inner h1"></div>
+        <div class="hex-inner h2"></div>
+        <div class="hex-inner h3"></div>
+        <div class="label">{text}</div>
+      </div>
     </button>
   );
 };
-
-const getLevel = (level) => {
-    let className = 'button ';
-    switch (level) {
-      case 'junior':
-        className += 'red';
-        break;
-      case 'mid-level':
-        className += 'orange';
-        break;
-      case 'high-mid-level':
-        className += 'blue';
-        break;
-      case 'senior':
-        className += 'green';
-        break;
-      case 'dev-ops':
-        className += 'purple';
-        break;
-      case 'data-ops':
-        className += 'black';
-        break;
-      case 'legacy':
-        className += 'grey';
-        break;
-      default:
-        className += 'default';
-        break;
-    }
-    return className;
-  };
 
 export default Button;
