@@ -1,0 +1,39 @@
+$button-color: #433f5c;
+@mixin hexagon-button($size) {
+  width: $size;
+  height: calc(#{$size} / 10);
+  position: relative;
+  background-color: $button-color;
+  overflow: hidden;
+  transform: rotate(30deg);
+  transform-origin: center;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 18%;
+    height: 67%;
+    background-color: #433f5c;
+    transform: rotate(47deg);
+    z-index: -1;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    // transform: translate(-10%, -50%) rotate(-60deg);
+    transform-origin: bottom left;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%) rotate(-60deg);
+    transform-origin: top right;
+  }
+}
+
+.button {
+  @include hexagon-button(100px);
+}

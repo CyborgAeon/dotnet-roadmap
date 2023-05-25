@@ -1,6 +1,5 @@
 import React from "react";
-import Button from "./components/button";
-import Codepen from "./components/codepen";
+import HexagonButton from "./components/HexagonButton";
 
 const App = () => {
   const handleButtonClick = () => {
@@ -9,7 +8,7 @@ const App = () => {
 
   return (
     <div>
-      <Button
+      <HexagonButton
         onClick={handleButtonClick}
         text="My version"
         className="junior"
